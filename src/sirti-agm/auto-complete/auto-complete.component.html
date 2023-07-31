@@ -1,0 +1,22 @@
+<h1>Google Maps withAuto-complete feature</h1>
+
+<div class="row mt-3">
+	<div class="col-6 offset-3" *ngIf="isApiLoaded">
+        <input  class="form-control"
+        placeholder="Insert a position"
+        ngx-google-places-autocomplete
+        [options]="options"
+        (onAddressChange)="handleAddressChange($event)"  
+        style="padding: 12px 20px; border: 1px solid #ccc; width: 400px; margin: 20px;"  
+
+        />
+	</div>
+        <pre>{{location | json}}</pre>
+        <google-map 
+        [height]="400"
+        [width]="400"
+        [center]="center"
+        [zoom]="zoom">
+    </google-map>
+    <p>{{center | json}}</p>
+</div>

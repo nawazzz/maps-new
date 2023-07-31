@@ -1,0 +1,15 @@
+<p>map-marker works!</p>
+
+<google-map height="400px"
+            width="750px"
+            [center]="center"
+            [zoom]="8"
+            (mapClick)="addMarker($event)"
+            >
+    <map-marker *ngFor="let marker of markers"
+                [position]="marker.position"
+                [options]="marker.options"
+                [label]="marker.label"
+                [title]="marker.title"></map-marker>
+    <!-- <map-marker></map-marker> -->
+</google-map>

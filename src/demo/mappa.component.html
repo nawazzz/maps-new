@@ -1,0 +1,30 @@
+<div>
+    <!-- <div *ngIf="mapOptions.zoomControl === true">
+        <button>Zoom In</button>
+        <button>Zoom Out</button>
+    </div> -->
+    <sirti-agm-maps [width]="500"
+                [height]="500"
+                [longitude]="41"
+                [latitude]="12"
+                [zoom]="zoom"
+                (mapClick)='mapIsClicked()'
+                (mapMouseMove)='mouseMoved()'
+                (mapDragend)='mapDragged($event)'
+                (centerChanged)="centerMoved()"
+                (idle)="mapIsIdle()"
+                (zoomChange)="editZoom()"
+                [showZoom]="handleZoom"
+                (zoomMap)="mapIsZoomed($event)"
+                (mapDrag)="mapIsDragged($event)"              
+></sirti-agm-maps>
+    <div >
+        <button (click)="zoomIn()">Zoom In</button>
+        <button (click)="zoomOut()">Zoom Out</button>
+    </div>
+</div>
+<!-- <sirti-agm-marker (mapClick)="mapMarker($event)"></sirti-agm-marker> -->
+
+<!-- The use of output is basically to transfer the data that is emitted through the emit method in the child component, the same
+     emitted data can be accessed in parent component using the $event as argument
+ -->

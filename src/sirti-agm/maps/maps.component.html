@@ -1,0 +1,35 @@
+    <button (click)="spostaCentro()">spostacentro {{isLinkLoaded | json}}</button>
+    <div *ngIf="isLinkLoaded">
+        <google-map 
+            [height]="getHeight"
+            [width]="getWidth"
+            [center]="center"
+            [zoom]="zoom"
+            [options]="options"
+            (mapClick)="clickMap($event)"
+            (mapMousemove)="move($event)"
+            (mapDragend)="move($event)"
+            (centerChange)="moveCenter($event)"
+            (idle)="mapIsReady($event)"
+            (zoomChange)="changeZoom($event)"
+            (click)="manageZoom()"
+            (click)="mapDragged()"
+            >
+        </google-map>
+        <!-- <div *ngIf="showZoom">
+            <button (click)="zoomIn()">Zoom in</button>
+            <button (click)="zoomOut()">Zoom out</button>
+        </div>     -->
+            
+        
+
+        {{center|json}}
+        <!--  -->
+        <div>Latitude: {{display?.lat}}</div>
+        <div>Longitude: {{display?.lng}}</div>
+    </div>
+
+    <!-- In order to have the button control externally, use a -->
+
+
+

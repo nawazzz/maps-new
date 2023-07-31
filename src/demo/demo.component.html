@@ -1,0 +1,52 @@
+<button (click)="addEntry()">Add Entry</button>
+<button (click)="removeEntry()">Remove Entry</button>
+<button (click)="alternate = !alternate">Toggle Alternate</button>
+<button (click)="toggle = !toggle">Toggle Toggle</button>
+<button (click)="color = !color">Toggle Color</button>
+<button (click)="size = size + 10">Increase size</button>
+<button (click)="size = size - 10">Decrease size</button>
+<button (click)="toggleSide()">Toggle Side</button>
+<button (click)="dotAnimation = !dotAnimation">Toggle dot animation</button>
+<button (click)="contentAnimation = !contentAnimation">Toggle content animation</button>
+
+<button (click)="gotoMap()">Vai alla mappa</button>
+<button (click)="gotoAutocomplete()">Vai in autocomplete</button>
+<button (click)="gotoMapInfoWindow()">Vai alla map info window</button>
+<button (click)="gotoMapMarker()">Vai alla map marker</button>
+
+
+<button (click)="mobileWidthThreshold = mobileWidthThreshold + 10">Increase Mobile Threshold</button>
+<button (click)="mobileWidthThreshold = mobileWidthThreshold - 10">Decrease Mobile Threshold</button> 
+Mobile Threshold: {{mobileWidthThreshold}}
+<router-outlet>
+
+</router-outlet>
+
+<!-- <sirti-agm-maps [width]="500"
+                [height]="500"
+                [longitude]="41"
+                [latitude]="12"
+                [zoom]="8"
+></sirti-agm-maps> -->
+
+<!-- <sirti-agm-autocomplete></sirti-agm-autocomplete> -->
+
+<!-- <mgl-timeline [toggle]="toggle" [alternate]="alternate" [focusOnOpen]="false" [side]="side" [mobileWidthThreshold]="mobileWidthThreshold">
+  <mgl-timeline-entry *ngFor="let entry of entries; let i = index" (expand)="onExpand($event, i)">
+    <mgl-timeline-entry-header>
+      <div>{{entry.header}}</div>w
+    </mgl-timeline-entry-header>
+    <mgl-timeline-entry-content 
+      [expandAnimationTiming]="contentAnimation ? '200ms ease' : '0ms'"
+      [collapseAnimationTiming]="contentAnimation ? '100ms ease' : '0ms'">
+      <div>{{entry.content}}</div>
+      <div>{{entry.content}}</div>
+      <div>{{entry.content}}</div>
+    </mgl-timeline-entry-content>
+    <mgl-timeline-entry-dot [class]="color ? 'primary' : 'accent'" [size]="size" 
+      [expandAnimationTiming]="dotAnimation ? '200ms ease' : '0ms'"
+      [collapseAnimationTiming]="dotAnimation ? '100ms ease' : '0ms'">
+    </mgl-timeline-entry-dot>
+    <mgl-timeline-entry-side>2017</mgl-timeline-entry-side>
+  </mgl-timeline-entry>
+</mgl-timeline> -->
